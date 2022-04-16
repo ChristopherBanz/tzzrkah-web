@@ -36,7 +36,7 @@ export default function RecordList() {
 
             const records = await response.json();
             setRecords(records);
-            console.log("maybe this is where it happens?!?!");
+            
         }
 
         getRecords();

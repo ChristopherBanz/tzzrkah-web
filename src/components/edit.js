@@ -4,9 +4,9 @@ import { useParams, useNavigate } from "react-router";
 export default function Edit() {
     const [form, setForm] = useState({
         name: "",
-        position: "",
-        level: "",
-        records: [],
+        highScore: "",
+        highLevel: "",
+        date: "",
     });
     const params = useParams();
     const navigate = useNavigate();
@@ -14,7 +14,7 @@ export default function Edit() {
     useEffect(() => {
         async function fetchData() {
             const id = params.id.toString();
-            const response = await fetch(`http://localhost:5000/record/${params.id.toString()}`);
+            const response = await fetch(`https://cryptic-coast-84939.herokuapp.com/record/${params.id.toString()}`);
 
             if (!response.ok) {
                 const message = `An error has occurred: ${response.statusText}`;
@@ -48,18 +48,20 @@ export default function Edit() {
         e.preventDefault();
         const editedPerson = {
             name: form.name,
-            position: form.position,
-            level: form.level,
+            highScore: form.highScore,
+            highLevel: form.highLevel,
+            date: form.date
         };
 
         // This will send a post request to update the data in the database.
-        await fetch(`http://localhost:5000/update/${params.id}`, {
+        await fetch(`https://cryptic-coast-84939.herokuapp.com/update/:${params.id}`, {      
             method: "POST",
             body: JSON.stringify(editedPerson),
             headers: {
                 'Content-Type': 'application/json'
             },
         });
+        console.log("maybe this is where it happens?!?!");
 
         navigate("/");
     }
@@ -80,52 +82,34 @@ export default function Edit() {
                     />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="position">Position: </label>
+                    <label htmlFor="highScore">High Score: </label>
                     <input
-                        type="text"
+                        type="number"
                         className="form-control"
-                        id="position"
-                        value={form.position}
-                        onChange={(e) => updateForm({ position: e.target.value })}
+                        id="highScore"
+                        value={form.highScore}
+                        onChange={(e) => updateForm({ highScore: e.target.value })}
                     />
                 </div>
                 <div className="form-group">
-                    <div className="form-check form-check-inline">
-                        <input
-                            className="form-check-input"
-                            type="radio"
-                            name="positionOptions"
-                            id="positionIntern"
-                            value="Intern"
-                            checked={form.level === "Intern"}
-                            onChange={(e) => updateForm({ level: e.target.value })}
-                        />
-                        <label htmlFor="positionIntern" className="form-check-label">Intern</label>
-                    </div>
-                    <div className="form-check form-check-inline">
-                        <input
-                            className="form-check-input"
-                            type="radio"
-                            name="positionOptions"
-                            id="positionJunior"
-                            value="Junior"
-                            checked={form.level === "Junior"}
-                            onChange={(e) => updateForm({ level: e.target.value })}
-                        />
-                        <label htmlFor="positionJunior" className="form-check-label">Junior</label>
-                    </div>
-                    <div className="form-check form-check-inline">
-                        <input
-                            className="form-check-input"
-                            type="radio"
-                            name="positionOptions"
-                            id="positionSenior"
-                            value="Senior"
-                            checked={form.level === "Senior"}
-                            onChange={(e) => updateForm({ level: e.target.value })}
-                        />
-                        <label htmlFor="positionSenior" className="form-check-label">Senior</label>
-                    </div>
+                    <label htmlFor="highLevel">Highest Level: </label>
+                    <input
+                        type="number"
+                        className="form-control"
+                        id="highLevel"
+                        value={form.highLevel}
+                        onChange={(e) => updateForm({ highLevel: e.target.value })}
+                    />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="date">Date: </label>
+                    <input
+                        type="date"
+                        className="form-control"
+                        id="date"
+                        value={form.date}
+                        onChange={(e) => updateForm({ date: e.target.value })}
+                    />
                 </div>
                 <br />
 
