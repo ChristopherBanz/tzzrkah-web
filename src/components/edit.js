@@ -54,15 +54,14 @@ export default function Edit() {
         };
 
         // This will send a post request to update the data in the database.
-        await fetch(`https://cryptic-coast-84939.herokuapp.com/update/:${params.id}`, {      
+        await fetch(`https://cryptic-coast-84939.herokuapp.com/update/${params.id}`, {      
             method: "POST",
             body: JSON.stringify(editedPerson),
             headers: {
                 'Content-Type': 'application/json'
             },
         });
-        console.log("maybe this is where it happens?!?!");
-
+        console.log(editedPerson);
         navigate("/");
     }
 
