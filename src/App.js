@@ -7,7 +7,7 @@ import Create from "./components/create";
 
 const App = () => {
     return (
-        <div>
+        <div style={{marginLeft:"25%", marginRight:"25%"}}>
             <Navbar />
             <Routes>
                 <Route exact path="/" element={<RecordList />} />
