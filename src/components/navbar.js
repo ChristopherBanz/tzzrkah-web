@@ -15,7 +15,7 @@ export default function Navbar() {
                 <NavLink className="navbar-brand" to="/">
                     <img src={logo} alt="blunggeloo"></img>
                 </NavLink>
-                <button
+                {/* <button
                     className="navbar-toggler"
                     type="button"
                     data-toggle="collapse"
@@ -35,7 +35,7 @@ export default function Navbar() {
                             </NavLink>
                         </li>
                     </ul>
-                </div>
+                </div> */}
             </nav>
         </div>
     );
