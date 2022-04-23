@@ -12,7 +12,7 @@ export default function Navbar() {
                 <NavLink className="navbar-brand" to="/">
                     <img src={logo} alt="blunggeloo"></img>
                 </NavLink>
-                <button
+                {/* <button
                     className="navbar-toggler"
                     type="button"
                     data-toggle="collapse"
@@ -22,7 +22,11 @@ export default function Navbar() {
                     aria-label="Toggle navigation"
                 >
                     <span className="navbar-toggler-icon"></span>
-                </button>
+                </button> */}
+                <a href="https://dl.dropboxusercontent.com/s/ogos4w8o5mnsdyn/Shooty2aSetup.exe?dl=0">
+                
+                <button>DOWNLOAD SHOOTY2A</button>
+                </a>
 
                 {/* <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ml-auto">
