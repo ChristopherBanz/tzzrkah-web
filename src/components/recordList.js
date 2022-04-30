@@ -73,11 +73,11 @@ export default function RecordList() {
     return (
         
         <div>
-            <h3 style={{}}>Top Scores</h3>
-            <table id="myTable2" className="table table-striped">
+            <h3>Top Scores</h3>
+            <table id="myTable2">
                 <thead>
                     <tr>
-                        <th onClick={() => altSort(0)}>Name</th>
+                        <th onClick={() => altSort(0)}>Name<div class="arrow-up"></div></th>
                         <th onClick={() => altSort(1)}>Score</th>
                         <th onClick={() => altSort(2)}>Highest Level</th>
                         <th onClick={() => altSort(3)}>Date</th>
