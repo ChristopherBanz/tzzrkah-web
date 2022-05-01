@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { trackPromise} from 'react-promise-tracker';
+
 //import { Link } from "react-router-dom";
 
 const Record = (props) => (
@@ -25,11 +27,13 @@ const Record = (props) => (
 export default function RecordList() {
     const [records, setRecords] = useState([]);
 
+   // trackPromise(
     // This method fetches the records from the database.
     useEffect(() => {
         async function getRecords() {
+            
             const response = await fetch(`https://cryptic-coast-84939.herokuapp.com/record/`);
-
+                        
             if (!response.ok) {
                 const message = `An error occurred: ${response.statusText}`;
                 window.alert(message);
@@ -40,12 +44,13 @@ export default function RecordList() {
             setRecords(records);
             
         }
-
-        getRecords();
+        trackPromise(
+        getRecords()
+        )
 
         return;
-    }, [records.length]);
-
+    }, [records.length])
+   // )
     // This method will delete a record
     async function deleteRecord(id) {
         await fetch(`https://cryptic-coast-84939.herokuapp.com/${id}`, {
