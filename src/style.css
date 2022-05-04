@@ -56,3 +56,9 @@ table th{
     
     border-right:10px solid blue; 
   }
+
+  .footer{
+    margin-top:10%;
+    justify-content: center;
+    display:flex;
+  }

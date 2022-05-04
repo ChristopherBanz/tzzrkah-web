@@ -10,7 +10,8 @@ export default function Navbar() {
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <NavLink className="navbar-brand" to="/">
-                    <img src={logo} alt="blunggeloo"></img>
+                    <img src={logo} alt="Shooty2a"></img>
+                    <p>From the creative mind of Tzrrkah!!!</p>
                 </NavLink>
                 {/* <button
                     className="navbar-toggler"
