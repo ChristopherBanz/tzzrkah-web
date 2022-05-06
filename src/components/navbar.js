@@ -25,9 +25,9 @@ export default function Navbar() {
                     <span className="navbar-toggler-icon"></span>
                 </button> */}
               
-                <a href="https://dl.dropboxusercontent.com/s/ewgugd6beau53eh/Shooty2aSetup013.exe?dl=0">
+                <a href="https://dl.dropboxusercontent.com/s/au76v39blsvsv5c/Shooty2a-v0.1.32-setup.exe?dl=0">
                 
-                <button>DOWNLOAD SHOOTY2A Version 0.1.3</button>
+                <button>DOWNLOAD SHOOTY2A Version 0.1.32</button>
                 </a>
 
                 {/* <div className="collapse navbar-collapse" id="navbarSupportedContent">
