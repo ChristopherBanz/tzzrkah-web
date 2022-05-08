@@ -54,8 +54,6 @@ export default function RecordList(){
   }}>
       <DataGrid 
 
-        autoHeight='true'
-
         sx={{ 
           border:"2px",
           '& .MuiDataGrid-cell:hover':{
