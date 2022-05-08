@@ -70,7 +70,7 @@ export default function Edit() {
         <div>
             <h3>Update Record</h3>
             <form onSubmit={onSubmit}>
-                <div className="form-group">
+                <div>
                     <label htmlFor="name">Name: </label>
                     <input
                         type="text"
@@ -80,7 +80,7 @@ export default function Edit() {
                         onChange={(e) => updateForm({ name: e.target.value })}
                     />
                 </div>
-                <div className="form-group">
+                <div>
                     <label htmlFor="highScore">High Score: </label>
                     <input
                         type="number"
@@ -90,7 +90,7 @@ export default function Edit() {
                         onChange={(e) => updateForm({ highScore: e.target.value })}
                     />
                 </div>
-                <div className="form-group">
+                <div>
                     <label htmlFor="highLevel">Highest Level: </label>
                     <input
                         type="number"
@@ -100,7 +100,7 @@ export default function Edit() {
                         onChange={(e) => updateForm({ highLevel: e.target.value })}
                     />
                 </div>
-                <div className="form-group">
+                <div>
                     <label htmlFor="date">Date: </label>
                     <input
                         type="date"
@@ -112,7 +112,7 @@ export default function Edit() {
                 </div>
                 <br />
 
-                <div className="form-group">
+                <div>
                     <input
                         type="submit"
                         value="Update Record"

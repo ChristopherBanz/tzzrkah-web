@@ -1,23 +1,23 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/navbar";
-import RecordList from "./components/recordList";
-import Edit from "./components/edit";
-import Create from "./components/create";
+import RecordList from "./components/recordList.tsx";
 import Footer from "./components/footer";
-import './style.css';
+import TestComponent from "./components/testComponent.tsx";
+import { ThemeProvider, styled} from "@mui/material/styles";
+import {Button} from "@mui/material";
+import {CssBaseline} from '@mui/material';
+import PrimaryComponent from "./components/primaryComponent";
+import custTheme from './theme';
 
 const App = () => {
     return (
-        <div style={{marginLeft:"25%", marginRight:"25%"}}>
-            <Navbar />
-            <Routes>
-                <Route exact path="/" element={<RecordList />} />
-                <Route path="/edit/:id" element={<Edit />} />
-                <Route path="/create" element={<Create />} />
-            </Routes>
+        <ThemeProvider theme={custTheme}>
+          <CssBaseline/>
+            <Navbar/>
+              <PrimaryComponent/>
             <Footer/>
-        </div>
+        </ThemeProvider>
     );
 };
 
