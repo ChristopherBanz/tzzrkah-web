@@ -2,7 +2,6 @@ import React from "react";
 import logo from '../img/shootyTitleImage.png';
 import {Box,Button} from '@mui/material';
 import { NavLink } from "react-router-dom";
-import { FormatAlignJustify } from "@mui/icons-material";
 import DownloadIcon from '@mui/icons-material/Download';
 
 export default function Navbar() {

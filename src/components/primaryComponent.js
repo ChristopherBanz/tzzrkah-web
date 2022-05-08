@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { BrowserRouter } from "react-router-dom";
 import RecordList from "../components/recordList.tsx";
 import TestComponent from "../components/testComponent.tsx";
 import {Box} from "@mui/material";
