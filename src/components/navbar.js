@@ -3,6 +3,7 @@ import logo from '../img/shootyTitleImage.png';
 import {Box,Button} from '@mui/material';
 import { NavLink } from "react-router-dom";
 import DownloadIcon from '@mui/icons-material/Download';
+import Popup from "../components/patchNotes";
 
 export default function Navbar() {
     return (
@@ -25,6 +26,7 @@ export default function Navbar() {
                 </a>
               </Box>
               <Box sx={{display:"flex", justifyContent:"center",}}>From the creative mind of Tzrrkah!!!</Box>
+                <Popup/>
             </nav>
 
 
